@@ -3,13 +3,14 @@ package cc.robotdreams;
 public class Student {
 
     private final int id;
+    private static int nextID = 0;
     private final String firstName;
     private final String lastName;
 
-    public Student (int id, String firstName, String lastName) {
+    public Student (String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.id = id;
+        this.id = ++nextID;
     }
 
     public String getFirstName() {
